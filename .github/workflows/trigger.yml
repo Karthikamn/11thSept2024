@@ -1,0 +1,13 @@
+name : Trigger
+
+on:
+ push:
+ workflow_dispatch:
+
+jobs:
+ echo-Welcome:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Welcome to triggers concept
+     run: echo "Welcome to triggers concept"
+
