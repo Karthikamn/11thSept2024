@@ -16,6 +16,7 @@ jobs:
       echo "Workflor is: ${{github.workflow}}"
       echo "Run ID is ${{github.run_id}}"
       echo "Runner is ${{github.run_number}}"
+      echo " Runner is: ${{runner.os}}"
    - name: Display Variable
      run: |
       echo "Variable ${{vars.MY_VAR}}"
