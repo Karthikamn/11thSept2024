@@ -2,11 +2,11 @@ name: Filters
 
 on:
  pull_request:
+  types:
+   - opened
   branches:
   - master
- push: 
-  paths-ignore:
-   - 'README.md'
+ 
  
 
 jobs:
