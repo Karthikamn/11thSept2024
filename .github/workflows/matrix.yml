@@ -15,7 +15,7 @@ jobs:
   steps:
    - uses: actions/setup-node@v4
      with:
-        node-version: ${{matrix.node}}
+        node-version: ${{matrix.node-version}}
    - name: Perform
      run: |
        echo "Matrix : ${{matrix.os}}
