@@ -18,7 +18,7 @@ jobs:
        echo "${{github.event_name}}"
        echo "${{github.ref}}"
    - name: '[debug]'
-     if: ${{inputs.debug && github.ref =='refs/head/master'}}
+     if: ${{inputs.debug && github.ref =='refs/heads/master'}}
      run: |
        echo "Triggered from master and inputs - debug"
      
