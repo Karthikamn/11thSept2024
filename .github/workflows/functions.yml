@@ -1,0 +1,13 @@
+name: functions
+
+on:
+ push:
+ workflow_dispatch:
+jobs:
+ functions-concept:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Success step
+     if: ${{success()}}
+     run: echo "I will be printed if it is success"
+     
