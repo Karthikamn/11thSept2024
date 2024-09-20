@@ -5,11 +5,12 @@ on:
  workflow_dispatch:
   inputs: 
    debug:
-   type: boolean
-   default: false
+    type: boolean
+    default: false
 jobs:
  echo-expression:
   runs-on: ubuntu-latest
-  steps:
-   run: echo "Expression"
+  steps: 
+   - name: Expression
+     run: echo "Expression"
    
