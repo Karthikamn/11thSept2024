@@ -15,4 +15,8 @@ jobs:
    - name: Success if previous is failed
      if: ${{failure()}}
      run: echo "I will print if fail stt happend previous"
+   - name: Cancel steps
+     if: ${{cancelled()}}
+     run: echo "Executes only if it is cancelled"
+     
      
