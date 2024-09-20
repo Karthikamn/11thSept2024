@@ -13,7 +13,7 @@ jobs:
      - ubuntu-latest
      - windows-latest
   steps:
-   - uses: actions/setupnode@v4
+   - uses: actions/setup-node@v4
      with:
         node: ${{matrix.node}}
    - name: Perform
