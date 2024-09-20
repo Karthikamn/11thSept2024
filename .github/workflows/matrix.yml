@@ -18,5 +18,5 @@ jobs:
         node-version: ${{matrix.node-version}}
    - name: Perform
      run: |
-       echo "Matrix : ${{matrix.os}}
+       echo "Matrix : ${{matrix.os}}"
        
