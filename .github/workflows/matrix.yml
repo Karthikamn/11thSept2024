@@ -5,7 +5,7 @@ on:
 
 jobs:
  matrix_echo:
-  runs-on: ${{matrix}}
+  runs-on: ${{matrix.os}}
   strategy:
    matrix:
     node: [v22.6.0,v21.7.3]
