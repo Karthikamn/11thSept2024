@@ -1,0 +1,22 @@
+name: matrix
+
+on:
+ workflow_dispatch:
+
+jobs:
+ matrix_echo:
+  runs-on: ${{matrix}}
+  strategy:
+   matrix:
+    node: [v22.6.0,v21.7.3]
+    os:
+     - ubuntu-latest
+     - windows-latest
+  steps:
+   - uses: actions/setupnode@v4
+     with:
+        node: ${{matrix.node}}
+   - name: Perform
+     run: |
+       echo "Matrix : ${{matrix.os}}
+       
