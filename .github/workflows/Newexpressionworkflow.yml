@@ -1,4 +1,4 @@
-name:  New Expressions
+name:  New Expressions to show workflow dispatch
 
 on:
  push:
