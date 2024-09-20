@@ -9,7 +9,10 @@ jobs:
   steps:
    - name: Failing step
      run: exit 1
-   - name: Success step
+   - name: skipped step if previous is failed - Success step
      if: ${{success()}}
      run: echo "I will be printed if it is success"
+   - name: Success if previous is failed
+     if: ${{failure()}}
+     run: echo "I will print if fail stt happend previous"
      
