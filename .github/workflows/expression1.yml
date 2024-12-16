@@ -1,0 +1,25 @@
+name: Expressions1
+
+on:
+ push:
+ workflow_dispatch:
+  inputs: 
+   debug:
+    type: boolean
+    default: false
+jobs:
+ echo-expression:
+  runs-on: ubuntu-latest
+  steps: 
+   - name: Expression
+     if: ${{inputs.debug}}
+     run: |
+       echo "Triggered because of inputs:debug"
+       echo "${{github.event_name}}"
+       echo "${{github.ref}}"
+   - name: '[debug]'
+     if: ${{inputs.debug && github.ref =='refs/heads/master'}}
+     run: |
+       echo "Triggered from master and inputs - debug"
+     
+   
